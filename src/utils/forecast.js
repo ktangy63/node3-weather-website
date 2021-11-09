@@ -12,7 +12,10 @@ const forecast = ({lat, long}, callback) => {
         } else {
             callback(undefined, {
                 temp: body.current.temperature,
-                feelslike: body.current.feelslike
+                feelslike: body.current.feelslike,
+                speed: body.current.weather_descriptions.wind_speed,
+                precip: body.current.weather_descriptions.precip
+
             })
         }
     })
